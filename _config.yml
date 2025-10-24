@@ -1,0 +1,27 @@
+title: "Michael D'Oliveira"
+description: "My work, thoughts, and projects."
+locale: "en-US"
+
+url: "https://michael-de-oliveira.github.io"
+baseurl: ""
+
+skin: "/assets/css/skins/dark.css"
+
+remote_theme: "mmistakes/so-simple-theme@3.2.0"
+
+author:
+  name: "Michael D'Oliveira"
+  bio: "Building things. Sharing what I learn."
+  links:
+    - title: "GitHub"
+      url: "https://github.com/michael-de-oliveira"
+      icon: "fab fa-github"
+
+read_time: true
+paginate: 5
+paginate_path: /page:num/
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag

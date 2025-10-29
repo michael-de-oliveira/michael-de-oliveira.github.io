@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta name="author" content="Michael D'Oliveira" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Michael D'Oliveira"},"url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/dark.css">
+  <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--home  ">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!-- intentionally left empty to disable default nav -->
+
+    
+
+
+
+
+
+<div class="masthead-inner"
+style="
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:0.75rem 1.25rem;  /* ← space from top & sides */
+  max-width:1100px;         /* ← keeps it inside the page */
+  margin:0 auto;            /* ← centers the whole header horizontally */
+">
+
+
+    <!-- LEFT SIDE: title + description -->
+    <div class="masthead-left" style="min-width:200px;">
+      
+        <h1 class="site-title" style="margin:0;">
+          <a href="/"></a>
+        </h1>
+      
+
+      
+    </div>
+
+    <!-- RIGHT SIDE: your custom quick links -->
+    <nav class="masthead-links"
+         style="font-size:0.9rem;white-space:nowrap;">
+         <a href="#timeline">My Journey</a> ·
+      <a href="/cv.pdf" target="_blank">CV</a> ·
+      <a href="https://www.linkedin.com/in/michael-de-oliveira" target="_blank">LinkedIn</a> ·
+      <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank">Google Scholar</a> ·
+      <a href="/contact/">Contact</a>
+    </nav>
+
+  </div>
+
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article>
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title"></h1>
+        
+      </header>
+      <div class="page-content">
+        <!-- Load font + custom alignment styles -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet" />
+
+<style>
+  /* Name styling */
+  .name-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 2rem 0 2rem 0;
+    line-height: 1.2;
+  }
+
+  /* Outer container: centered and responsive */
+  .intro-wrap {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Row: image + text */
+  .intro-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    margin-bottom: 3rem;
+  }
+
+  /* Photo column */
+  .intro-photo {
+    flex-shrink: 0;        /* don’t let it collapse */
+    width: 280px;          /* lock photo column width */
+  }
+
+  .intro-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: block;
+  }
+
+  /* Text column */
+  .intro-text {
+    flex: 1;               /* <- THIS makes the text area fill remaining width */
+    line-height: 1.6;
+    min-width: 0;          /* <- allows flex item to actually shrink if needed */
+  }
+
+  /* Mobile / narrow screens */
+  @media (max-width: 1000px) {
+    .intro-flex {
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+    }
+
+    .intro-photo {
+      width: 220px;        /* slightly smaller photo on mobile */
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-text {
+      width: 100%;
+    }
+
+    .name-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+</style>
+
+<div class="intro-wrap">
+  <h1 class="name-title">Michael de Oliveira</h1>
+
+  <div class="intro-flex">
+    <!-- PHOTO -->
+    <figure class="intro-photo">
+      <img src="/images/me.jpg" alt="Michael de Oliveira" />
+    </figure>
+
+    <!-- TEXT -->
+    <div class="intro-text">
+    <h2 style="margin-top:1rem;">About me</h2>
+      <p>
+    I’m a Ph.D. candidate at the  <a href="https://inl.int/" target="_blank" rel="noopener noreferrer">
+    International Iberian Nanotechnology Laboratory (INL)</a>, specializing in quantum computation under the supervision of <a href="https://sites.google.com/view/efgalvao" target="_blank" rel="noopener noreferrer">
+     Ernesto Galvão</a>, <a href="https://en.wikipedia.org/wiki/Elham_Kashefi" target="_blank" rel="noopener noreferrer">
+     Elham Kashefi</a>, and  <a href="https://www.di.uminho.pt/~lsb/" target="_blank" rel="noopener noreferrer">
+     Luis Soares Barbosa </a>. Within my Ph.D. program, I have also been a visiting research student at Sorbonne University, an associate researcher at the <a href=" https://www.honhai.com/en-us/rd-and-technology/institute" target="_blank" rel="noopener noreferrer"> Hon Hai Research Center</a> working with <a href=" https://www.minhsiu.com/" target="_blank" rel="noopener noreferrer"> Min-Hsiu Hsieh</a> , and an intern at <a href="https://www.ibm.com/us-en" target="_blank" rel="noopener noreferrer">IBM</a> working with <a href="https://agheorghiu.com/" target="_blank" rel="noopener noreferrer"> Alexandru Gheorghiu</a>.
+      </p>
+
+    <h2 style="margin-top:2rem;">Research Interests</h2>
+      <p>
+        I am broadly fascinated by the physical limits of our universe, the foundations of computation, 
+        and the mathematical structures that underpin them. My research centers on quantum computation 
+        and information.
+      </p>
+    <h4 style="margin-top:0rem;">Core Areas of Interest:</h4>
+      <ul style="margin-top:0.rem;">
+        <li>Quantum algorithms</li>
+        <li>Computational complexity theory</li>
+        <li>Learning theory</li>
+      </ul>
+      <p>
+        I am particularly interested in the fundamental distinctions between quantum and classical 
+        computations and processes.
+      </p>
+    </div>
+  </div>
+</div>
+
+<section id="timeline" style="scroll-margin-top:4rem; margin-top:30vh;">
+
+
+  <h1 style="text-align: left; margin-left: calc(62% - 650px);"> So Far …</h1>
+
+<style>
+/* Timeline container */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 3rem auto 5rem auto;
+  padding: 0 1rem;
+}
+
+/* move the vertical line to the wrapper, not the whole timeline */
+.timeline-line-wrapper {
+  position: relative;
+}
+
+/* draw the line only over items inside wrapper */
+.timeline-line-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #c5c5c5;
+  top: 0;
+  bottom: 0;          /* <-- now it only goes to bottom of wrapper */
+  left: 50%;
+  margin-left: -1px;
+}
+
+
+
+/* Each container */
+.timeline-item {
+  padding: 1rem 2rem;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  color: #222; /* default text color */
+  margin-bottom: 8rem;
+}
+
+/* Circles */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: -7px;
+  background-color: #333;
+  border: 3px solid #f5f5f5;
+  top: 1rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Positioning */
+.timeline-item.left { left: 0; }
+.timeline-item.right { left: 50%; }
+.timeline-item.right::after { left: -7px; }
+
+.timeline-content {
+  position: relative;
+  background-color: #f1f6ff;
+  margin-top: 1rem;
+  padding: 1rem 1rem 0rem 1rem ;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid #e0e0e0;
+  line-height: 1.6;
+  color: #222;
+  width: 600px;       /* <-- HARD WIDTH, not max-width */
+  max-width: 600px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .timeline-item.right { left: 0%; }
+
+  /* move the line on mobile */
+  .timeline-line-wrapper::after { left: 20px; }
+
+  .timeline-item::after,
+  .timeline-item.right::after { left: 12px; }
+}
+.timeline-item.left .timeline-content {
+  max-width: 500px;
+  transform: translateX(-12.5rem);
+}
+
+.timeline-item.right .timeline-content {
+  max-width: 500px;
+  transform: translateX(0rem);
+}
+
+</style>
+
+<style>
+@media screen and (max-width: 768px) {
+
+  /* 1. Full-width timeline container */
+  .timeline {
+    max-width: 100%;
+    margin: 2rem 0 4rem 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  /* 2. Rail (vertical line):
+        Move it a bit further from the edge so it doesn't look clipped.
+        We'll use 44px now instead of 36px. */
+  .timeline-line-wrapper::after {
+    left: 44px;
+    right: auto;
+    transform: none;
+    width: 2px;
+    background-color: #c5c5c5;
+  }
+
+  /* 3. Each timeline item: single column, spaced */
+  .timeline-item {
+    position: relative;
+    width: 100%;
+    left: 0 !important;
+    /* more indent so text never collides with dot */
+    padding: 0 1rem 0 5.5rem;  /* ~88px left padding */
+    box-sizing: border-box;
+    margin-bottom: 4rem;       /* add vertical breathing room */
+  }
+
+  /* 4. Default dot style for *all* items in mobile */
+  .timeline-item::after {
+    position: absolute;
+    left: 44px;                /* align dot with the rail */
+    right: auto;
+    top: 0.6rem;
+    width: 14px;
+    height: 14px;
+    background-color: #333;
+    border: 3px solid #f5f5f5;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  /* 5. Force right items to behave EXACTLY like left items.
+        This kills the desktop ".timeline-item.right::after" offsets.
+        The !important beats any earlier rule. */
+  .timeline-item.right {
+    left: 0 !important;
+  }
+
+  .timeline-item.right::after {
+    left: 44px !important;
+    right: auto !important;
+    top: 0.6rem !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* 6. Card block:
+        - fill width
+        - kill desktop horizontal translate
+        - avoid overflow */
+  .timeline-content {
+    width: auto;
+    max-width: 100% !important;
+    margin-top: 0.5rem;
+    transform: none !important;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    max-width: 100% !important;
+    transform: none !important;
+  }
+
+  /* 7. Titles:
+        - don't absolutely position (so they don't overlap cards)
+        - keep your color (no override)
+   */
+  .timeline-item h3 {
+    position: static !important;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .timeline-content img[style*="position:absolute"] {
+  order: -1;
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+
+  display: block !important;
+  margin: 0 auto 0.9rem auto !important; /* move logo ABOVE text */
+  max-width: 120px !important;
+  height: auto !important;
+  opacity: 0.9 !important;
+  /* This is the trick:
+       pull the image ABOVE the text visually */
+    margin: 0 auto 0.75rem auto !important;
+}
+   .timeline-item.left.last .timeline-sidebox {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    margin-top: 2rem !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+
+ #timeline h1 {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    text-align: left !important;
+    font-size: 1.5rem; /* optional: keep it from being huge on phone */
+    line-height: 1.3;
+  }
+  
+
+
+}
+
+</style>
+
+<div class="timeline">
+  <div class="timeline-line-wrapper">
+
+<div class="timeline-item right">
+  <!-- TITLE OUTSIDE BOX -->
+  <h3 style="
+    position: absolute;
+    top: 0.3rem;
+    left: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+  ">
+    Quantum Computing Theory Research Scientist Intern
+  </h3>
+
+  <div class="timeline-content" style="background-color:#f1f6ff; position:relative; margin-top:5rem;">
+    <p>
+      As an intern at IBM Quantum in the <a href="https://mitibmwatsonailab.mit.edu/" target="_blank" rel="noopener noreferrer">
+    MIT–IBM Watson AI Lab
+  </a>, I worked on developing new quantum algorithms in learning theory, a subfield of computer science that studies the theoretical foundations of machine learning. Our team designed quantum algorithms capable of efficiently learning the underlying Boolean functions that label quantum data examples. The key innovation was a quantum method that can learn significantly more complex labeling functions than previously possible, resolving a problem that had remained open for decades in computational learning theory.
+   <figure style="margin-top:1rem; text-align:center;">
+      <img src="images/ibmphoto.png" alt="Math Competition" style="max-width:100%; border-radius:8px;" />
+     <!--  <figcaption style="font-size:0.9rem; color:#555;">Participating in math and robotics competitions</figcaption> -->
+    </figure>
+  <strong>Read more:</strong>
+  <a href="https://www.arxiv.org/abs/2509.14461" target="_blank" rel="noopener noreferrer">Research Paper</a> 
+    </p>
+
+    <!-- IBM LOGO -->
+    <img src="/images/ibm.svg" alt="IBM logo" style="
+           position:absolute;
+           left:-150px;
+           top:-5.5rem;
+           width:90px;
+           height:auto;
+           opacity:0.85;
+         " />
+
+     <!-- IBM photo
+    <img src="/images/ibmphoto.png"
+         alt="IBM photo"
+         style="
+           position:absolute;
+           left:-405px;
+           top:+1.5rem;
+           width:330px;
+           height:auto;
+           opacity:0.85;
+         ">  -->
+  </div>
+</div>
+
+
+
+
+
+
+<div class="timeline-item left">
+  <!-- TITLE OUTSIDE BOX -->
+  <h3 style="
+    position: absolute;
+    top: 0.8rem;
+    right: 1.5rem;     /* mirror of 'left:1.5rem' for right side */
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+  ">
+    Associate Researcher
+  </h3>
+
+  <div class="timeline-content" style="
+    background-color:#f9f9f9;
+    position:relative;
+    margin-top:5rem;  /* pushes the box lower to make room for the title */
+  ">
+    <p>
+As an Associate Researcher at Foxconn in the <a href=" https://www.honhai.com/en-us/rd-and-technology/institute" target="_blank" rel="noopener noreferrer">
+   Hon Hai Quantum Computing Research Center
+  </a>, I have focused on quantum computational circuit complexity, particularly on identifying computational problems that demonstrate a provable quantum advantage over classical computation. Our team showed that parallel quantum computing models can provably outperform biased threshold circuits — a parallel classical computing model that captures key aspects of feedforward neural networks. This work established the largest known separation between classical and quantum computational power of this type. We further extended the result to qudit-based architectures, broadening its applicability across a wider range of quantum systems. Finally, we demonstrated that this quantum advantage is robust to noise, indicating that it is practically realizable with near-term quantum technologies.
+    <!-- FIGURE BELOW LEFT BOX -->
+    <figure style="margin-top:1rem; text-align:center;">
+      <img src="images/1728893340107.jpeg" alt="Autonomous Soccer Robots" style="max-width:100%; border-radius:8px;" />
+     <!-- <figcaption style="font-size:0.9rem; color:#555;">RoboCup autonomous soccer robots in action</figcaption>-->
+    </figure>
+  <strong>Read more:</strong>
+  <a href="https://www.nature.com/articles/s41467-025-58545-4" target="_blank" rel="noopener noreferrer">Research Paper (in Nature Communications)</a> ·
+  <a href="https://tw.news.yahoo.com/%E6%B7%B1%E5%A4%9C%E4%BE%86%E9%BB%9E%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%B8-%E9%B4%BB%E6%B5%B7%E9%A9%9A%E4%BA%BA%E7%A0%94%E7%A9%B6%E7%99%BB%E4%B8%8A%E5%9C%8B%E9%9A%9B%E6%9C%9F%E5%88%8A-%E7%9C%8B%E6%87%82%E5%B0%B1%E8%83%BD%E8%AE%8A%E8%9F%BB%E4%BA%BA-140500942.html" target="_blank" rel="noopener noreferrer">Yahoo News</a> ·
+  <a href="https://inl.int/quantum-advantage-noisy-circuits/" target="_blank" rel="noopener noreferrer">INL News</a>
+    </p>
+
+    <!-- FOXCONN LOGO -->
+    <img src="/images/foxcon_c.png" alt="Foxconn logo" style="
+           position:absolute;
+           right:-300px;       /* places it on the opposite side of the line */
+           top:-8.5rem;        /* aligns roughly with title height */
+           width:240px;
+           height:auto;
+           opacity:0.85;
+         " />
+
+    <!-- FOXCONN PHOTO (optional, mirror of IBM photo) 
+    <img src="/images/foxconn.jpg" 
+         alt="Foxconn photo"
+         style="
+           position:absolute;
+           right:-405px;       /* mirror of 'left:-405px' */
+           top:+1.5rem;
+           width:330px;
+           height:auto;
+           opacity:0.85;
+         ">
+         -->
+  </div>
+</div>
+
+
+
+<div class="timeline-item right">
+  <!-- TITLE OUTSIDE BOX -->
+  <h3 style="
+    position: absolute;
+    top: 0.5rem;
+    left: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+  ">
+    Visiting Researcher
+  </h3>
+
+  <div class="timeline-content" style="background-color:#f1f6ff; position:relative; margin-top:5rem;">
+    <p>
+   As a Visiting Researcher at <a href="https://www.lip6.fr/" target="_blank" rel="noopener noreferrer">
+   Sorbonne University’s LIP6 </a> during my PhD, I worked on developing rigorous benchmarking protocols for quantum devices to move beyond existing randomized and heuristic-based characterization methods. Our team introduced a hardware-agnostic, heuristic-free benchmarking framework that provides formal performance guarantees for families of quantum circuits. This framework enables the certification of implementable algorithms based on the circuits to which they compile, while also informing and improving quantum compilation techniques. Notably, the benchmark was already used to test one of the leading quantum computers developed by Quantinuum (H1 Quantum Processing Unit). Our test enabled the demonstration and characterization of the circuit sizes that this state-of-the-art device can reliably execute.
+  
+       <figure style="margin-top:1rem; text-align:center;">
+      <img src="images/quantinuum.jpg" alt="Math Competition" style="max-width:100%; border-radius:8px;" />
+       <figcaption style="font-size:0.9rem; color:#555;">Quantinuum's H1 QPU</figcaption>
+    </figure>
+    <strong>Read more:</strong>
+  <a href="https://iopscience.iop.org/article/10.1088/2058-9565/adc298/pdf" target="_blank" rel="noopener noreferrer">Research Paper </a> ·
+   <a href="https://journals.aps.org/prl/abstract/10.1103/jpms-v3kw" target="_blank" rel="noopener noreferrer">Experimental Realization</a>· <a href="https://bip.inesctec.pt/en/noticias/putting-quantum-computers-to-the-test-a-new-method-with-certified-and-scalable-tests/" target="_blank" rel="noopener noreferrer">INESC News</a>
+    </p>
+
+    <!-- IBM LOGO -->
+    <img src="/images/lip6.jpeg" alt="LIP6 logo" style="
+           position:absolute;
+           left:-125px;
+           top:-6.5rem;
+           width:60px;
+           height:auto;
+           opacity:0.85;
+         " />
+
+     <!-- IBM photo 
+    <img src="/images/quantinuum.jpg"
+         alt="IBM photo"
+         style="
+           position:absolute;
+           left:-405px;
+           top:+1.5rem;
+           width:350px;
+           height:auto;
+           opacity:0.85;
+         "> -->
+  </div>
+</div>
+
+<div class="timeline-item left">
+  <!-- TITLE OUTSIDE BOX -->
+  <h3 style="
+    position: absolute;
+    top: 0.8rem;
+    right: 1.5rem;     /* mirror of 'left:1.5rem' for right side */
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+  ">
+    
+  </h3>
+
+  <div class="timeline-content" style="
+    background-color:#f9f9f9;
+    position:relative;
+    margin-top:5rem;  /* pushes the box lower to make room for the title */
+  ">
+    <p>
+Also, as a Visiting Researcher at Sorbonne University’s LIP6, I worked on quantum computational circuit complexity. Our team demonstrated that parallel quantum computing models equipped with the capability to copy measurement results  and multi-qubit gates can exhibit a provable quantum advantage over strong parallel classical computational models. This work establishes the first such separation for a parallel quantum computing models  that does not rely on more complex quantum resources, while using standard finite quantum gate sets available on current quantum hardware.
+   
+      <!-- FIGURE BELOW LEFT BOX -->
+    <figure style="margin-top:1rem; text-align:center;">
+      <img src="images/qac.jpeg" alt="Autonomous Soccer Robots" style="max-width:100%; border-radius:8px;" />
+     <!-- <figcaption style="font-size:0.9rem; color:#555;">RoboCup autonomous soccer robots in action</figcaption>-->
+    </figure>
+
+  <strong>Read more:</strong>
+  <a href="https://arxiv.org/abs/2404.18104" target="_blank" rel="noopener noreferrer">Research Paper (in ACM TQC)</a>
+    </p>
+    
+
+    <!-- FOXCONN PHOTO (optional, mirror of IBM photo) 
+    <img src="/images/qac.jpeg" 
+         alt="Foxconn photo"
+         style="
+           position:absolute;
+           right:-405px;       /* mirror of 'left:-405px' */
+           top:+1.5rem;
+           width:330px;
+           height:auto;
+           opacity:0.85;
+         ">-->
+         
+  </div>
+</div>
+
+
+
+<div class="timeline-item right">
+  <div class="timeline-content" style="background-color:#f1f6ff; position:relative; margin-top:-25px;">
+    <h3>Master's degree</h3>
+    <p>
+      I earned my Master’s degree in Computer Science from the <a href="https://www.uminho.pt/PT" target="_blank" rel="noopener noreferrer">
+  University of Minho</a>, with coursework in quantum computing, information theory, and physics. My Master’s thesis focused on quantum algorithms for expert systems supervised by <a href="https://www.di.uminho.pt/~lsb/" target="_blank" rel="noopener noreferrer">  Professor Luis Soares Barbosa</a>. I graduated with a grade of 18/20 and received the <a href="18_19.pdf" target="_blank">Academic Excellence Prize</a> as the top student in my first year.
+    </p>
+
+    <!-- IBM LOGO -->
+    <img src="/images/Minho.png" alt="IBM logo" style="
+           position:absolute;
+           left:-160px;         /* moves it to the opposite side of the line */
+           top:0.5rem;
+           width:100px;
+           height:auto;
+           opacity:0.85;
+         " />
+  </div>
+</div>
+
+<div class="timeline-item left">
+  <div class="timeline-content" style="background-color:#FFF8DC; margin-top:-25px;">
+    <h3>Awarded the Gulbenkian Prize for “New Talents in Quantum Computing.”</h3>
+    <p>
+     Award that distinguished eight portuguese students that year for developing a research project in the field of quantum technologies.    
+     
+     <!-- FIGURE BELOW LEFT BOX -->
+    <figure style="margin-top:1rem; text-align:center;">
+      <img src="images/NTCQ-FCGFev2019.jpg" alt="Autonomous Soccer Robots" style="max-width:100%; border-radius:8px;" />
+     <!-- <figcaption style="font-size:0.9rem; color:#555;">RoboCup autonomous soccer robots in action</figcaption>-->
+    </figure>
+
+  <strong>Read more:</strong>
+  <a href="https://link.springer.com/article/10.1007/s10699-021-09781-6" target="_blank" rel="noopener noreferrer">Research Paper</a>
+    </p>
+    <!-- IBM LOGO -->
+    <img src="/images/24.png" alt="IBM logo" style="
+           position:absolute;
+           right:-225px;         /* moves it to the opposite side of the line */
+           top:-0rem;
+           width:160px;
+           height:auto;
+           opacity:0.85;
+         " />
+  </div>
+</div>
+
+<div class="timeline-item right">
+  <div class="timeline-content" style="background-color:#f1f6ff; position:relative; margin-top:-25px;">
+    <h3>Bachelor's degree</h3>
+    <p>
+      I earned my Bachelor’s degree in Engineering Physics from the <a href="https://www.uminho.pt/PT" target="_blank" rel="noopener noreferrer">
+  University of Minho</a>, with coursework covering electronics, computer science, and physics. I graduated with a grade of 17/20 and received the Academic Excellence Prize as the top student in both my <a href="16_17.pdf" target="_blank">second</a> and <a href="17_18.pdf" target="_blank">third</a> years.
+    </p>
+
+    <!-- IBM LOGO -->
+    <img src="/images/Minho.png" alt="IBM logo" style="
+           position:absolute;
+           left:-160px;         /* moves it to the opposite side of the line */
+           top:0.5rem;
+           width:100px;
+           height:auto;
+           opacity:0.85;
+         " />
+  </div>
+</div>
+
+
+<div class="timeline-item left last" style="position: relative;">
+  <!-- TITLE OUTSIDE BOX -->
+  <h3 style="
+    position: absolute;
+    top: 0.8rem;
+    right: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+  ">
+    High School student
+  </h3>
+
+  <!-- LEFT BOX -->
+  <div class="timeline-content" style="
+    background-color:#f9f9f9;
+    position:relative;
+    margin-top:5rem;
+  ">
+    <h3>Design and Development of Autonomous Soccer Robots</h3>
+    <p>
+     I collaborated with a multidisciplinary team to develop small autonomous robots that play soccer in a 2-vs-2 format. This experience introduced me to programming, 3D modeling, and various aspects of electronics. Our team participated in various national competitions as well as two RoboCups, a world-level robotics competition, winning 1st place in the Superteam competition at RoboCup 2013 in Eindhoven, Netherlands, and the Best Interview Award at RoboCup 2014 in João Pessoa, Brazil.  
+    </p>
+
+    <!-- FIGURE BELOW LEFT BOX -->
+    <figure style="margin-top:1rem; text-align:center;">
+      <img src="images/robocup.jpg" alt="Autonomous Soccer Robots" style="max-width:100%; border-radius:8px;" />
+     <!-- <figcaption style="font-size:0.9rem; color:#555;">RoboCup autonomous soccer robots in action</figcaption>-->
+    </figure>
+
+
+  </div>
+
+  <!-- RIGHT BOX -->
+  <div class="timeline-content timeline-sidebox" style="
+    background-color:#f9f9f9;
+    position:absolute;
+    top:6rem;
+    left: calc(100% + 2rem);
+    margin-top:0;
+    transform: translateX(0);
+  ">
+    <h3>Math Competitions</h3>
+    <p>
+During high school, I took part in numerous mathematics competitions, including national math olympiads, the strategic table game Produto (5th place nationwide), and international contests such as Kanguru Matemático (11th place nationwide).
+    </p>
+       <figure style="margin-top:1rem; text-align:center;">
+      <img src="images/images12b6.jpg" alt="Math Competition" style="max-width:100%; border-radius:8px;" />
+     <!--  <figcaption style="font-size:0.9rem; color:#555;">Participating in math and robotics competitions</figcaption> -->
+    </figure>
+  </div>
+
+</div>
+
+
+</div>
+
+</div></section>
+
+
+<div class="entries-list"></div>
+
+
+        
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="copyright">
+    
+      <p>&copy; 2025 . Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

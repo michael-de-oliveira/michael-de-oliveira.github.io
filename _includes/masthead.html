@@ -1,0 +1,55 @@
+{% if site.logo %}
+  <div class="site-logo">
+    <a href="{{ '/' | relative_url }}">
+      <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
+    </a>
+  </div>
+{% endif %}
+
+{% assign page_image = page.image.path | default: page.image %}
+
+{% unless page_image %}
+
+<div class="masthead-inner"
+style="
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:0.75rem 1.25rem;  /* ← space from top & sides */
+  max-width:1100px;         /* ← keeps it inside the page */
+  margin:0 auto;            /* ← centers the whole header horizontally */
+">
+
+
+    <!-- LEFT SIDE: title + description -->
+    <div class="masthead-left" style="min-width:200px;">
+      {% if page.url == '/' %}
+        <h1 class="site-title" style="margin:0;">
+          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </h1>
+      {% else %}
+        <div class="site-title" style="margin:0;">
+          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </div>
+      {% endif %}
+
+      {% if site.description and site.description != "" %}
+        <p class="site-description" style="margin:0;">
+          {{ site.description }}
+        </p>
+      {% endif %}
+    </div>
+
+    <!-- RIGHT SIDE: your custom quick links -->
+    <nav class="masthead-links"
+         style="font-size:0.9rem;white-space:nowrap;">
+         <a href="#timeline">My Journey</a> ·
+      <a href="/cv.pdf" target="_blank">CV</a> ·
+      <a href="https://www.linkedin.com/in/michael-de-oliveira" target="_blank">LinkedIn</a> ·
+      <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank">Google Scholar</a> ·
+      <a href="/contact/">Contact</a>
+    </nav>
+
+  </div>
+{% endunless %}

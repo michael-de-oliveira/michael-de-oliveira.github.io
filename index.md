@@ -121,7 +121,7 @@ title: ""
 </div>
 
 
-<section id="timeline" style="scroll-margin-top:4rem; margin-top:30vh;">
+<section id="timeline" style="scroll-margin-top:4rem; margin-top:10vh;">
 
 
   <h1 style="text-align: left; margin-left: calc(62% - 650px);"> So Far …</h1>

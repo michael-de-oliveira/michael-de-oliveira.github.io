@@ -106,6 +106,41 @@ title: ""
       text-align: left;
     }
   }
+
+  .research-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: 3rem;
+    align-items: start;
+    margin-top: 2rem;
+  }
+  .research-grid .research-interests > h2,
+  .research-grid .selected-research > h2 {
+    margin-top: 0 !important;
+  }
+  .selected-research { min-width: 0; }
+  .research-paper { margin: 0 0 1.25rem; padding: 0 0 1.25rem; border-bottom: 1px solid rgba(128,128,128,0.3); }
+  .research-paper:last-child { border-bottom: 0; padding-bottom: 0; }
+  .research-paper .paper-venue { font-size: 0.8rem; font-weight: 600; margin: 0 0 0.35rem; }
+  .research-paper h3 { font-size: 0.9rem; line-height: 1.4; margin: 0 0 0.45rem; }
+  .research-paper > p:last-child { font-size: 0.9rem; line-height: 1.5; margin: 0; }
+  @media (max-width: 900px) {
+    .research-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+
+
+  @media (min-width: 901px) {
+    .name-title { margin: 1rem 0 1.25rem; }
+    .intro-flex { margin-bottom: 1rem; }
+    .intro-text > p { margin-bottom: 0; }
+    .research-grid { margin-top: 1rem; }
+    .research-grid h2 { margin-bottom: 0.85rem; }
+    .research-interests p { margin-bottom: 0.85rem; }
+    .research-interests h4 { margin-bottom: 0.65rem; }
+    .research-interests ul { margin-bottom: 0.85rem; }
+    .research-paper { margin-bottom: 0.75rem; padding-bottom: 0.75rem; }
+  }
+
 </style>
 
 <div class="intro-wrap">
@@ -127,6 +162,7 @@ title: ""
     </div>
   </div>
 
+<div class="research-grid">
   <section class="research-interests">
     <h2 style="margin-top:2rem;">Research Interests</h2>
       <p>
@@ -142,19 +178,39 @@ title: ""
         I am always happy to discuss ideas and explore potential collaborations with others interested in these topics. I also welcome inquiries from prospective research interns.
       </p>
   </section>
+  <aside class="selected-research" aria-labelledby="selected-research-title">
+    <h2 id="selected-research-title">Selected Research</h2>
+    <article class="research-paper">
+      <p class="paper-venue">Nature Communications 2025 · TQC 2024</p>
+      <h3><a href="https://www.nature.com/articles/s41467-025-58545-4" target="_blank" rel="noopener noreferrer">Unconditional advantage of noisy qudit quantum circuits over biased threshold circuits in constant depth</a></h3>
+      <p>A provable, noise-robust advantage of quantum circuits over biased threshold circuits (modeling biased neural networks), both at constant depth.</p>
+    </article>
+    <article class="research-paper">
+      <p class="paper-venue">COLT 2026 · QIP 2026</p>
+      <h3><a href="https://arxiv.org/abs/2509.14461" target="_blank" rel="noopener noreferrer">Learning depth-3 circuits via quantum agnostic boosting</a></h3>
+      <p>A new quantum-agnostic boosting algorithm enabling near-polynomial-time learning of depth-3 circuits from quantum examples.</p>
+    </article>
+    <article class="research-paper">
+      <p class="paper-venue">FOCS 2026</p>
+      <h3><a href="https://arxiv.org/abs/2606.16425" target="_blank" rel="noopener noreferrer">Worst-case depth hierarchy for shallow quantum circuits</a></h3>
+      <p>An explicit depth hierarchy for constant-depth quantum circuits, showing that increasing circuit depth enhances computational power and yields unconditional quantum advantages over shallow classical circuits.</p>
+    </article>
+  </aside>
+</div>
+
 </div>
 
 
 <style>
-#timeline { max-width: 800px; margin-left: auto; margin-right: auto; }
+#timeline { max-width: 1000px; margin-left: auto; margin-right: auto; }
 .timeline { width: 100%; margin: 0; padding: 0; box-sizing: border-box; }
 .timeline-line-wrapper { position: relative; padding: 1rem 0; }
 .timeline-line-wrapper::after { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; transform: translateX(-50%); background: #c5c5c5; }
-.timeline-item { position: relative; width: calc(50% - 56px); margin: 0 0 2rem; padding: 0; box-sizing: border-box; color: #222; }
+.timeline-item { position: relative; width: calc(50% - 72px); margin: 0 0 2rem; padding: 0; box-sizing: border-box; color: #222; }
 .timeline-item.left { left: 0; }
-.timeline-item.right { left: calc(50% + 56px); }
-.timeline-item::after { content: ''; position: absolute; top: 1rem; right: -56px; width: 14px; height: 14px; background: #333; border: 3px solid #f5f5f5; border-radius: 50%; transform: translateX(50%); z-index: 1; }
-.timeline-item.right::after { left: -56px; right: auto; transform: translateX(-50%); }
+.timeline-item.right { left: calc(50% + 72px); }
+.timeline-item::after { content: ''; position: absolute; top: 1rem; right: -72px; width: 14px; height: 14px; background: #333; border: 3px solid #f5f5f5; border-radius: 50%; transform: translateX(50%); z-index: 1; }
+.timeline-item.right::after { left: -72px; right: auto; transform: translateX(-50%); }
 .timeline-content { position: relative; width: 100%; max-width: 100%; padding: 1rem; margin: 0; box-sizing: border-box; border-radius: 12px; border: 1px solid #e0e0e0; color: #222; font-size: 0.9rem; line-height: 1.5; overflow-wrap: anywhere; }
 .timeline-content h3 { position: static; margin: 0 0 1rem; color: #222; font-size: 1rem; line-height: 1.4; }
 .timeline-content figure { margin-left: 0; margin-right: 0; }
@@ -163,11 +219,11 @@ title: ""
 .timeline-content figure img { display: block; width: auto !important; max-width: min(100%, 320px) !important; max-height: 220px; object-fit: contain; margin: 0 auto; }
 .timeline-content > :last-child { margin-bottom: 0; }
 .timeline-sidebox { margin-top: 1.5rem; }
-.timeline-logo { position: absolute; top: 0; right: -56px; transform: translateX(50%); width: 80px; max-height: 70px; object-fit: contain; height: auto; padding: 6px; box-sizing: border-box; background: white; border-radius: 6px; z-index: 2; }
-.timeline-item.right .timeline-logo { left: -56px; right: auto; transform: translateX(-50%); }
+.timeline-logo { position: absolute; top: 0; right: -72px; transform: translateX(50%); width: 80px; max-height: 70px; object-fit: contain; height: auto; padding: 6px; box-sizing: border-box; background: white; border-radius: 6px; z-index: 2; }
+.timeline-item.right .timeline-logo { left: -72px; right: auto; transform: translateX(-50%); }
 @media (max-width: 1000px) {
  .timeline-line-wrapper::after { left: 36px; }
- .timeline-item, .timeline-item.left, .timeline-item.right { left: 0; width: 100%; max-width: 440px; padding-left: 92px; }
+ .timeline-item, .timeline-item.left, .timeline-item.right { left: 0; width: 100%; max-width: 560px; padding-left: 112px; }
  .timeline-item::after, .timeline-item.right::after { left: 36px; right: auto; transform: translateX(-50%); }
  .timeline-logo, .timeline-item.right .timeline-logo { left: 36px; right: auto; transform: translateX(-50%); width: 64px; }
 }
@@ -179,6 +235,18 @@ title: ""
  .timeline-content { padding: 0.85rem; }
 }
 </style>
+<style>
+
+#timeline .phd-defense .timeline-logo { width: 80px; max-width: none; max-height: 70px; padding: 6px; }
+@media (max-width: 1000px) {
+  #timeline .phd-defense .timeline-logo { width: 64px; left: 36px; }
+  #timeline .phd-defense { padding-left: 112px; }
+}
+@media (max-width: 480px) {
+  #timeline .phd-defense .timeline-logo { width: 46px; left: 24px; padding: 3px; }
+  #timeline .phd-defense { padding-left: 62px; }
+}
+</style>
 <section id="timeline" style="scroll-margin-top:4rem; margin-top:4rem;">
 <h1 style="text-align:left; margin:0 0 2rem;"> So Far …</h1>
 
@@ -186,7 +254,7 @@ title: ""
 <div class="timeline">
 <div class="timeline-line-wrapper">
 
-<div class="timeline-item left phd-defense"><img alt="INL — International Iberian Nanotechnology Laboratory" class="timeline-logo" src="/images/inl-logo.png"/>
+<div class="timeline-item left phd-defense"><img alt="INL — International Iberian Nanotechnology Laboratory" class="timeline-logo" src="/images/inl-symbol.png"/>
 
 <div class="timeline-content" style="background-color:#f1f6ff;">
 <h3>PhD Thesis Defense</h3>

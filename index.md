@@ -263,6 +263,7 @@ title: ""
 <figure style="margin:1rem 0; padding-bottom:1rem;">
 <img alt="Michael de Oliveira presenting his PhD thesis to the defense jury" src="/images/phd-defense.jpeg" style="display:block; width:100%; height:auto; border-radius:8px;"/>
 </figure>
+<p><strong>Read more:</strong> <a href="/IQFCC.pdf" target="_blank" rel="noopener noreferrer">Full thesis</a></p>
 </div>
 </div>
 <div class="timeline-item right"><img alt="IBM logo" class="timeline-logo" src="/images/ibm.svg"/>
